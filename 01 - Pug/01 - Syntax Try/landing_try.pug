@@ -1,4 +1,15 @@
+-var title = "This is a title using var"
+-var arrayTitle = ["This is the title #1","This is the title #2","This is the title #3","This is the title #4","This is the title #4","This is the title #5"]
+
+
 doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body doctype html
 html
     head
         meta(charset="UTF-8")
@@ -6,7 +17,7 @@ html
     body
         header
             h1 Hello World
-            a Link to say Hello
+            a(href="./landing_try.html") Link to say Hello
         section.intro
             .intro: img(src="./src/images/anyImage.jpg")
         p. 
@@ -17,3 +28,20 @@ html
             |another paragraph
             |using interpolation
         
+        p using "=" to call
+
+        h2= title
+
+        p using "#" to call
+
+        h3 #{title}
+
+        h3 #{arrayTitle[0]}
+        h3 #{arrayTitle[1]}
+        h3 #{arrayTitle[2]}
+        h3 #{arrayTitle[3]}
+        h3 #{arrayTitle[4]}
+
+        p using matrix to extract just the number of the title
+
+        h3 #{arrayTitle[0][19]}
