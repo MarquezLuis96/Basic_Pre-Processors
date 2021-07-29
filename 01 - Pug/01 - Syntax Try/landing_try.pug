@@ -1,15 +1,15 @@
+doctype html
 -var title = "This is a title using var"
 -var arrayTitle = ["This is the title #1","This is the title #2","This is the title #3","This is the title #4","This is the title #4","This is the title #5"]
-
-
-doctype html
+-var user = "Luis"
+//-var user = "AnotherPerson"
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body doctype html
+        title Trying PUG
+    body
 html
     head
         meta(charset="UTF-8")
@@ -45,3 +45,15 @@ html
         p using matrix to extract just the number of the title
 
         h3 #{arrayTitle[0][19]}
+
+        p using each-loops
+
+        ul
+            each titles in arrayTitle
+                li= titles
+        
+
+        if user == "Luis"
+            p Hello #{user} you are welcome
+        else
+            p Hello you must to register
