@@ -57,3 +57,40 @@ html
             p Hello #{user} you are welcome
         else
             p Hello you must to register
+        
+
+        //MIXINS without vars
+
+        mixin boxContent
+            section.box
+                div.box__container
+                    h5.title
+                    h6.subtitle
+                    img(src="./img/image.jpg")
+                    button.btn
+
+
+        //CALLING MIXIN
+        +boxContent
+        +boxContent
+        +boxContent
+
+
+        //MIXING WITH VARIABLES
+
+        mixin boxContent_W_vars(title, subtitle, image)
+            section.box
+                div.box__container
+                    h5.title=title
+                    h6.subtitle=subtitle
+                    img(src="./img/"+image)
+                    button.btn
+        //CALLING MIXIN WITH VARIABLES
+        +boxContent_W_vars("Title 1", "Subtitle 1", "img1.jpg")
+        +boxContent_W_vars("Title 2", "Subtitle 2", "img2.jpg")
+        +boxContent_W_vars("Title 3", "Subtitle 3", "img3.jpg")
+        +boxContent_W_vars("Title 4", "Subtitle 4", "img4.jpg")
+        +boxContent_W_vars("Title 5", "Subtitle 5", "img5.jpg")
+
+
+        
