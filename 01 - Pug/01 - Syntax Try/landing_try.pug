@@ -1,0 +1,102 @@
+doctype html
+-var title = "This is a title using var"
+-var arrayTitle = ["This is the title #1","This is the title #2","This is the title #3","This is the title #4","This is the title #4","This is the title #5"]
+-var user = "Luis"
+//-var user = "AnotherPerson"
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Trying PUG
+    body
+html
+    head
+        meta(charset="UTF-8")
+        link(rel="stylesheet", href="./src/styles/css/landing_try.css")
+    body
+        header
+            h1 Hello World
+            a(href="./landing_try.html") Link to say Hello
+        section.intro
+            .intro: img(src="./src/images/anyImage.jpg")
+        p. 
+            This is a paragraph
+            Using interpolation
+        p
+            |This is
+            |another paragraph
+            |using interpolation
+        
+        p using "=" to call
+
+        h2= title
+
+        p using "#" to call
+
+        h3 #{title}
+
+        h3 #{arrayTitle[0]}
+        h3 #{arrayTitle[1]}
+        h3 #{arrayTitle[2]}
+        h3 #{arrayTitle[3]}
+        h3 #{arrayTitle[4]}
+
+        p using matrix to extract just the number of the title
+
+        h3 #{arrayTitle[0][19]}
+
+        p using each-loops
+
+        ul
+            each titles in arrayTitle
+                li= titles
+        
+
+        if user == "Luis"
+            p Hello #{user} you are welcome
+        else
+            p Hello you must to register
+        
+
+        //MIXINS without vars
+
+        mixin boxContent
+            section.box
+                div.box__container
+                    h5.title
+                    h6.subtitle
+                    img(src="./img/image.jpg")
+                    button.btn
+
+
+        //CALLING MIXIN
+        +boxContent
+        +boxContent
+        +boxContent
+
+
+        //MIXING WITH VARIABLES
+
+        mixin boxContent_W_vars(title, subtitle, image)
+            section.box
+                div.box__container
+                    h5.title=title
+                    h6.subtitle=subtitle
+                    img(src="./img/"+image)
+                    button.btn
+        //CALLING MIXIN WITH VARIABLES
+        +boxContent_W_vars("Title 1", "Subtitle 1", "img1.jpg")
+        +boxContent_W_vars("Title 2", "Subtitle 2", "img2.jpg")
+        +boxContent_W_vars("Title 3", "Subtitle 3", "img3.jpg")
+        +boxContent_W_vars("Title 4", "Subtitle 4", "img4.jpg")
+        +boxContent_W_vars("Title 5", "Subtitle 5", "img5.jpg")
+
+
+    //USING INCLUDES AND EXTENDS
+    block contenidos
+    include to_insert.pug
+
+    //USING EXTEND
+    block content
+    //- extend to_insert.pug
