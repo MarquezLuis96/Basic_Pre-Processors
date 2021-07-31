@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
   color: #333333;
+  line-height: 28px;
 }
 h1,
 h2,
@@ -44,6 +45,7 @@ h3 {
 .intro__categoria {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
 }
 .intro__titulo {
   font-family: "Oswald", sans-serif;
@@ -69,9 +71,15 @@ h3 {
 .intro__autor span {
   display: inline-block;
 }
+.intro__autor-titulo {
+  color: rgba(255, 255, 255, 0.5);
+}
 .articulo--principal {
   max-width: 660px;
   margin: 0 auto;
+}
+.articulo--principal__intro {
+  font-size: 28px;
 }
 .articulo--principal h2 {
   margin: 40px 0px 40px 0px;
