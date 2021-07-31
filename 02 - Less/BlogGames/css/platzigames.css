@@ -4,13 +4,14 @@
 }
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+  color: #333333;
 }
 h1,
 h2,
 h3 {
   margin: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
 .intro {
@@ -41,11 +42,11 @@ h3 {
   color: #FFFFFF;
 }
 .intro__categoria {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
 .intro__titulo {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-size: 50px;
 }
@@ -67,5 +68,16 @@ h3 {
 }
 .intro__autor span {
   display: inline-block;
+}
+.articulo--principal {
+  max-width: 660px;
+  margin: 0 auto;
+}
+.articulo--principal h2 {
+  margin: 40px 0px 40px 0px;
+  text-align: center;
+}
+.articulo--principal h3 {
+  color: #8841DA;
 }
 /*# sourceMappingURL=platzigames.css.map */
