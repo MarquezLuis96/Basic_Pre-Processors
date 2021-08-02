@@ -2,9 +2,7 @@
 	width: 50%;
 	height: 90px;
 	margin: 30px auto 0px auto;
-	border-radius: 20px;
-	background-color: $color-claro;
-	color: $color-primario;
+	@include caja;
 	i {
 		display: block;
 		float: left;
@@ -21,5 +19,6 @@
 		text-transform: uppercase;
 		font-size: 12px;
 		font-family: $fuente2;
+		color: get-opacity($color-primario, 0.50);
 	}
 }
