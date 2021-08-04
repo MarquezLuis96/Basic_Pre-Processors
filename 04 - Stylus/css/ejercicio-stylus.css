@@ -55,18 +55,6 @@ body {
   font-size: 25px;
   color: #333;
 }
-.contenido {
-  margin-bottom: 40px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-  padding: 30px 0;
-}
 .caja {
   max-width: 400px;
   background-color: #fff;
@@ -86,5 +74,39 @@ body {
   text-transform: uppercase;
   font-weight: normal;
   font-family: "Oswald", sans-serif;
+}
+.contenido {
+  margin-bottom: 40px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0;
+  color: #333;
+}
+.estadistica--articulos {
+  height: 70px;
+  padding: 20px;
+  border-top: 1px solid #333;
+}
+.estadistica--articulos ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.estadistica--articulos ul li {
+  list-decoration: none;
+}
+.estadistica--articulos ul li span {
+  margin-left: 10px;
 }
 /*# sourceMappingURL=ejercicio-stylus.css.map */
