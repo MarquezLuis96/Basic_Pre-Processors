@@ -1,3 +1,5 @@
+alpha color,
+nivel,
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5,6 +7,18 @@
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
+}
+h3 {
+  font-size: 20px;
+  margin: 0px;
+}
+h2 {
+  font-size: 25px;
+  margin: 0px;
+}
+h1 {
+  font-size: 30px;
+  margin: 0px;
 }
 .buscador {
   width: 100%;
@@ -105,6 +119,7 @@ body {
 }
 .estadistica--articulos ul li {
   list-decoration: none;
+  color: opacidad(#8841da, 0.5);
 }
 .estadistica--articulos ul li span {
   margin-left: 10px;
